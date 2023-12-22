@@ -130,8 +130,8 @@ WITH
 
         SELECT
             parsed_response.question_response_id,
-            parsed_response.parsed_question_option_key,
-            parsed_response.parsed_value,
+--            parsed_response.parsed_question_option_key,  --uncomment for debugging
+--            parsed_response.parsed_value,  --uncomment for debugging
             parsed_response.survey_response_id,
             parsed_response.survey_id,
             parsed_response.question_id,
