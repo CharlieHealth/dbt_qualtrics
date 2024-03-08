@@ -81,6 +81,7 @@ WITH
             LATERAL split_to_table(response.value, ',') AS split_value
         WHERE
             question.question_type = 'MC'
+            AND question.selector = 'MAVR'. --question is multiple choice and allows multiple selections
             AND response.sub_question_text IS NULL --split the response.value ONLY if it is a non-text style of input
             AND (
                 NOT EXISTS ( --toss the record if there is a separate explicit choice made for a text input response, ie if option 5 is text input and populated, keep the text value, rather than the value of 5
